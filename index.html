@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girlfriend Wishes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: pink;
+            margin: 50px;
+        }
+        .wish-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wish-box">
+        <h2>Hey My Love ❤</h2>
+        <p id="wish">Click the button to receive a sweet wish!</p>
+        <button onclick="sendWish()">Send Wish</button>
+    </div>
+
+    <script>
+        function sendWish() {
+            const wishes = [
+                "You are my sunshine, my happiness, my everything! ❤",
+                "Every moment with you is a beautiful memory. Love you! 💖",
+                "I am the luckiest person to have you in my life! 😘",
+                "You are my heart’s sweetest melody. Stay with me forever! 🎶💕",
+                "Your love is my strength, my motivation, and my happiness! 💓"
+            ];
+            const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+            document.getElementById("wish").innerHTML = randomWish;
+        }
+    </script>
+
+</body>
+</html>
